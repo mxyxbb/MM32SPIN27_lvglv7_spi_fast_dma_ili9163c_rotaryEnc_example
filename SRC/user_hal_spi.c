@@ -9,7 +9,7 @@
 
 #include "user_hal_spi.h"
 #include "string.h"
-#include "ssd1306.h"
+#include "main.h"
 
 /*******************************************************************************
 * @name   : SPIM_Init
@@ -26,20 +26,20 @@ void MX_SPI2_Init(void)
     RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOC, ENABLE);   
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI2, ENABLE);//SPI2 clk enable
 		
-		GPIO_InitStructure.GPIO_Pin  = SSD1306_DC_Pin;
+		GPIO_InitStructure.GPIO_Pin  = SPI2_DC_Pin;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-    GPIO_Init(SSD1306_DC_Port, &GPIO_InitStructure);
+    GPIO_Init(SPI2_DC_Port, &GPIO_InitStructure);
 	
-		GPIO_InitStructure.GPIO_Pin  = SSD1306_Reset_Pin;
+		GPIO_InitStructure.GPIO_Pin  = SPI2_Reset_Pin;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-    GPIO_Init(SSD1306_Reset_Port, &GPIO_InitStructure);
+    GPIO_Init(SPI2_Reset_Port, &GPIO_InitStructure);
 	
-		GPIO_InitStructure.GPIO_Pin  = SSD1306_CS_Pin;
+		GPIO_InitStructure.GPIO_Pin  = SPI2_CS_Pin;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-    GPIO_Init(SSD1306_CS_Port, &GPIO_InitStructure);
+    GPIO_Init(SPI2_CS_Port, &GPIO_InitStructure);
 
 //    //SPI_NSS
 //    GPIO_PinAFConfig(GPIOB, GPIO_PinSource15, GPIO_AF_1);

@@ -10,6 +10,7 @@
 
 #include <stddef.h>
 
+#include "main.h"
 #include "ssd1306_conf.h"
 
 #if defined(MM32SPIN27p)
@@ -52,24 +53,24 @@
 #endif
 
 #ifndef SSD1306_CS_Port
-#define SSD1306_CS_Port         GPIOB
+#define SSD1306_CS_Port         SPI2_CS_Port
 #endif
 #ifndef SSD1306_CS_Pin
-#define SSD1306_CS_Pin          GPIO_Pin_15
+#define SSD1306_CS_Pin          SPI2_CS_Pin
 #endif
 
 #ifndef SSD1306_DC_Port
-#define SSD1306_DC_Port         GPIOB
+#define SSD1306_DC_Port         SPI2_DC_Port
 #endif
 #ifndef SSD1306_DC_Pin
-#define SSD1306_DC_Pin          GPIO_Pin_14
+#define SSD1306_DC_Pin          SPI2_DC_Pin
 #endif
 
 #ifndef SSD1306_Reset_Port
-#define SSD1306_Reset_Port      GPIOC
+#define SSD1306_Reset_Port      SPI2_Reset_Port
 #endif
 #ifndef SSD1306_Reset_Pin
-#define SSD1306_Reset_Pin       GPIO_Pin_6
+#define SSD1306_Reset_Pin       SPI2_Reset_Pin
 #endif
 
 

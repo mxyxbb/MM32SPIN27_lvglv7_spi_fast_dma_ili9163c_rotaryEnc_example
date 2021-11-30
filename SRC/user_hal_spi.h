@@ -13,6 +13,7 @@
 #include "user_hal.h"
 #include "user_hal_lib.h"
 
+void MX_SPI1_Init(void);
 void MX_SPI2_Init(void);
 void HAL_SPI_Transmit(SPI_TypeDef *SPIx, uint8_t *pData, uint16_t Size, uint32_t Timeout);
 void HAL_SPI_Transmit_DMA(SPI_TypeDef *SPIx, uint8_t *pData, uint16_t Size);
