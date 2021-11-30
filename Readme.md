@@ -83,3 +83,5 @@ void HAL_SPI_Transmit_DMA(SPI_TypeDef *SPIx, uint8_t *pData, uint16_t Size);
 ![pic1](https://i.loli.net/2021/11/30/vKRoZk6TVO54CAg.png)
 
 ![pic2](https://i.loli.net/2021/11/30/sY7rmv5EzydNoL2.png)
+
+github link: https://github.com/mxyxbb/MM32SPIN27_lvglv7_spi_fast_dma_ili9163c_rotaryEnc_example
