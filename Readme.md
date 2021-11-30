@@ -66,7 +66,7 @@ void MX_EXTI_Init(void);
 void HAL_GPIO_EXTI_Callback(uint32_t EXTI_Linex);
 ```
 
-对于SPI的实现比较简略，仅支持SPI2，建议使用者先阅读源码后再使用。
+对于SPI的实现比较简略，dma方式仅支持SPI2，建议使用者先阅读源码后再使用。
 
 ```c
 void MX_SPI2_Init(void);
